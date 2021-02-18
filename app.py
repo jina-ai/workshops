@@ -5,6 +5,7 @@ import os
 import sys
 
 from jina.flow import Flow
+from components import *
 
 num_docs = int(os.environ.get('JINA_MAX_DOCS', 50000))
 image_src = 'data/**/*.png'

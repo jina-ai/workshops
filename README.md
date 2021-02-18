@@ -67,6 +67,38 @@ with:
   channel_axis: -1
 ```
 
+## Changing Crafters
+
+In `pods/craft.yml`:
+
+- remove `target_size: 96` from `ImageNormalizer`
+
+```yaml
+- !CenterImageCropper
+with:
+  target_size: 96
+  channel_axis: -1
+metas:
+  name: img_cropper
+```
+
+We also need to specify the request paths, both for `IndexRequest` and for `SearchRequest`:
+
+```yaml
+      - !CraftDriver
+        with:
+          traversal_paths: ['r']
+          executor: img_cropper
+```
+
+We can save an intermediary file to examine the cropped image to see if everything looks as expected. Add this to the `IndexRequest`:
+
+```yaml
+      - !PngToDiskDriver
+        with:
+          prefix: 'crop'
+```
+
 ## License
 
 Copyright (c) 2021 Jina AI Limited. All rights reserved.
