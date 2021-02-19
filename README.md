@@ -1,7 +1,4 @@
-# Jina Workshop @ TUM-AI: Image Search with Pokemons
-
-[comment]: <> (TODO)
-[TOC]
+# Jina Workshop @ TUM.ai: Image Search with Pokemons
 
 ## Download and Extract Data
 
