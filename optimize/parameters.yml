@@ -1,0 +1,19 @@
+- !CategoricalParameter
+  jaml_variable: JINA_MODEL_NAME
+  choices:
+    - MobileNetV2
+    - MobileNet
+    - DenseNet121
+    - DenseNet169
+    - VGG16
+    - DenseNet201
+    - VGG19
+    - Xception
+    - InceptionV3
+    - ResNet50V2
+    - ResNet50
+    - ResNet101V2
+    - ResNet101
+    - InceptionResNetV2
+    - ResNet152V2
+    - ResNet152

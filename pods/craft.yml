@@ -1,8 +1,6 @@
 !CompoundExecutor
 components:
   - !ImageReader
-    with:
-      from_bytes: true
     metas:
       name: img_read
   - !ImageNormalizer
