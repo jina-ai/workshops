@@ -132,3 +132,5 @@ dmypy.json
 data/
 pretrained/
 workspace/
+index.png
+search.png
