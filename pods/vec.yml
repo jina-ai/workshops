@@ -1,8 +1,8 @@
 !NumpyIndexer
 with:
-  index_filename: vec.gz
+  index_filename: embedding.gz
 metas:
-  name: vec_idx  # a customized name
+  name: embedding_idx  # a customized name
   workspace: ${{JINA_WORKSPACE}}
 requests:
   on:

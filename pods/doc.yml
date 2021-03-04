@@ -1,8 +1,8 @@
 !BinaryPbIndexer
 with:
-  index_filename: doc.gz
+  index_filename: metadata.gz
 metas:
-  name: doc_idx
+  name: metadata_idx
   workspace: ${{JINA_WORKSPACE}}
 requests:
   on:
