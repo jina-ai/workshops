@@ -3,7 +3,7 @@
 ## Prerequisite
 
 Make sure to install the requirements.
-We recommend creating a fresh virtual environment for python (3.7 or 3.8).
+We recommend creating a fresh virtual environment for python3.7.
 There, you can do `pip install -r requirements.txt`.
 
 You should also download the data and the pre-trained model before the workshop.
