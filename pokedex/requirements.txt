@@ -1,4 +1,4 @@
 tensorflow-cpu==2.1
-jina[hub,http,cv,optimizer]==1.0.7
+jina[hub,http,cv,optimizer]==1.0.8
 h5py==2.10.0
 jupyterlab
