@@ -1,4 +1,4 @@
-# Jina Workshop @ TUM.ai: Image Search with Pokemons
+# Jina Workshop: Image Search with Pokemons
 
 ## Prerequisite
 
@@ -17,6 +17,6 @@ sh ./download.sh
 
 ## During the workshop
 
-Follow along with the [notebook](./flow.ipynb).
+Follow along with the [notebook](./workshop.ipynb).
 
 Start Jupyter Lab (an improved version of Jupyter Notebook) with `jupyter lab .`
