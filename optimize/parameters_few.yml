@@ -1,0 +1,6 @@
+- !CategoricalParameter
+  jaml_variable: JINA_MODEL_NAME
+  choices:
+    - MobileNetV2
+    - MobileNet
+    - DenseNet121
