@@ -1,27 +1,23 @@
-!Flow
-version: '1'
+jtype: Flow
 pods:
+  - name: logger
+    uses:
+      jtype: MyLogger
   - name: crafter
-    show_exc_info: true
-    uses: pods/craft.yml
-    read_only: true
-  - name: encoder
-    show_exc_info: true
-    uses: pods/encode.yml
-    shards: 1
     timeout_ready: 600000
-    read_only: true
-  - name: embedding_idx
-    show_exc_info: true
-    uses: pods/vec.yml
-    polling: any
-    timeout_ready: 100000 # larger timeout as in query time will read all the data
-  - name: metadata_idx
-    uses: pods/doc.yml
-    polling: any
-    timeout_ready: 100000 # larger timeout as in query time will read all the data
-    needs: [gateway]
-  - name: join_all
-    uses: _merge
-    needs: [metadata_idx, embedding_idx]
-    read_only: true
+    uses:
+      jtype: ImageNormalizer
+      with:
+        resize_dim: 96
+  - name: logger
+    uses:
+      jtype: MyLogger
+  - name: encoder
+    timeout_ready: 600000
+    uses:
+        jtype: BigTransferEncoder
+        with:
+          on_gpu: true
+  - name: logger
+    uses:
+      jtype: MyLogger
