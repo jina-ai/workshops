@@ -1,23 +1,21 @@
 jtype: Flow
-pods:
-  - name: logger
-    uses:
-      jtype: MyLogger
+executors:
   - name: crafter
     timeout_ready: 600000
-    uses:
+    uses: 
       jtype: ImageNormalizer
       with:
         resize_dim: 96
-  - name: logger
-    uses:
-      jtype: MyLogger
   - name: encoder
     timeout_ready: 600000
     uses:
         jtype: BigTransferEncoder
         with:
           on_gpu: true
-  - name: logger
+  - name: indexer
     uses:
-      jtype: MyLogger
+      jtype: MemMapIndexer
+      with: # arguments for this specific class
+        index_file_name: index
+      metas:  # universal arguments for all Executors
+        workspace: $JINA_WORKSPACE

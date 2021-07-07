@@ -1,4 +1,6 @@
-jina[hub,cv]==2.0
+jina[hub,cv,uvloop]~=2.0
 jupyterlab
-git+https://github.com/jina-ai/executor-image-normalizer.git
+git+https://github.com/jina-ai/executor-image-normalizer.git@feat-dtype-conversion
+git+https://github.com/jina-ai/executor-image-torch-encoder.git@fix-setuppy
 git+https://github.com/jina-ai/executor-big-transfer-encoder.git
+matplotlib==3.4.2
