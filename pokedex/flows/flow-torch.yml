@@ -1,0 +1,22 @@
+jtype: Flow
+executors:
+  - name: crafter
+    timeout_ready: 600000
+    uses: 
+      jtype: ImageNormalizer
+      with:
+        resize_dim: 96
+        target_dtype: numpy.uint8        
+  - name: encoder
+    timeout_ready: 600000
+    uses:
+        jtype: ImageTorchEncoder
+        with:
+          use_default_preprocessing: True
+  - name: indexer
+    uses:
+      jtype: MemMapIndexer
+      with: # arguments for this specific class
+        index_file_name: index
+      metas:  # universal arguments for all Executors
+        workspace: $JINA_WORKSPACE        
