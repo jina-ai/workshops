@@ -21,7 +21,7 @@ class MemMapIndexer(Executor):
         q_emb = _ext_A(_norm(a))
         d_emb = _ext_B(_norm(b))
         dists = _cosine(q_emb, d_emb)
-        idx, dist = self._get_sorted_top_k(dists, int(parameters['top_k']))
+        idx, dist = self._get_sorted_top_k(dists, int(parameters.get('top_k', 5)))
         for _q, _ids, _dists in zip(docs, idx, dist):
             for _id, _dist in zip(_ids, _dists):
                 d = Document(self._docs[int(_id)], copy=True)
