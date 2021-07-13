@@ -8,7 +8,7 @@ def main():
     docs.append(Document(content='hello Jina'))
 
     flow = Flow().add(                                          # provide as class name or jinahub+docker URI
-        uses='jinahub+docker://ie1obzm9',
+        uses='jinahub+docker://7dne55rj',
         override_with={                                         # RequestLogger arguments
             'default_log_docs': 1
         },

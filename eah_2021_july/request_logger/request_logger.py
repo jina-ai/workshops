@@ -3,6 +3,7 @@ import time
 from typing import Dict
 
 from jina import Executor, DocumentArray, requests
+from jina.logging.logger import JinaLogger
 
 
 class RequestLogger(Executor):                                                                      # needs to inherit from Executor
@@ -11,6 +12,7 @@ class RequestLogger(Executor):                                                  
                 *args, **kwargs):                                                                   # *args and **kwargs are required for Executor
         super().__init__(*args, **kwargs)                                                           # before any custom logic
         self.default_log_docs = default_log_docs
+        self.logger = JinaLogger('req_logger')
         self.log_path = os.path.join(self.workspace, 'log.txt')
         if not os.path.exists(self.log_path):
             with open(self.log_path, 'w'): pass
@@ -20,6 +22,8 @@ class RequestLogger(Executor):                                                  
             docs: DocumentArray,
             parameters: Dict,
             **kwargs):
+        self.logger.info('Request being processed...')
+
         nr_docs = int(parameters.get('log_docs', self.default_log_docs))                            # accesing parameters (nr are passed as float due to Protobuf)
         with open(self.log_path, 'a') as f:
             f.write(f'request at time {time.time()} with {len(docs)} documents:\n')
