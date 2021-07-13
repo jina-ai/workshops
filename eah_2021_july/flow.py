@@ -8,13 +8,13 @@ def main():
     docs.append(Document(content='hello Jina'))
 
     flow = Flow().add(                                          # provide as class name or jinahub+docker URI
-        uses='jinahub+docker://ie1obzm9:980d90f35cf31adf35c805e69c63e68c',
+        uses='jinahub+docker://ie1obzm9',
         override_with={                                         # RequestLogger arguments
             'default_log_docs': 1
         },
-        volumes='workspace:/abc',                               # mapping local folders to docker instance folders
+        volumes='workspace:/internal_workspace',                # mapping local folders to docker instance folders
         override_metas={                                        # Executor (parent class) arguments
-            'workspace': '/abc',                                # this should match the above
+            'workspace': '/internal_workspace',                 # this should match the above
         },
     )
 

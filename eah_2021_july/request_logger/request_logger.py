@@ -15,7 +15,7 @@ class RequestLogger(Executor):                                                  
         if not os.path.exists(self.log_path):
             with open(self.log_path, 'w'): pass
 
-    @requests                                                                                       # decorate
+    @requests                                                                                       # decorate, by default it will be called on every request
     def log(self,                                                                                   # arguments are automatically received
             docs: DocumentArray,
             parameters: Dict,
