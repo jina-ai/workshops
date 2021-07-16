@@ -11,8 +11,6 @@ executors:
     timeout_ready: 600000
     uses:
         jtype: ImageTorchEncoder
-        with:
-          use_default_preprocessing: True
   - name: indexer
     uses:
       jtype: MemMapIndexer
