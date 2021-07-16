@@ -1,8 +1,40 @@
 from typing import Dict, Tuple
+import os
+import time
 
 import numpy as np
+
 from jina import Executor, DocumentArray, requests, Document
 from jina.types.arrays.memmap import DocumentArrayMemmap
+from jina.logging.logger import JinaLogger
+
+
+class RequestLogger(Executor):                                                                      # needs to inherit from Executor
+    def __init__(self,
+                default_log_docs: int = 1,                                                          # your arguments
+                *args, **kwargs):                                                                   # *args and **kwargs are required for Executor
+        super().__init__(*args, **kwargs)                                                           # before any custom logic
+        self.default_log_docs = default_log_docs
+        self.logger = JinaLogger('req_logger')
+        self.log_path = os.path.join(self.workspace, 'log.txt')
+        if not os.path.exists(self.log_path):
+            with open(self.log_path, 'w'): pass
+
+    @requests                                                                                       # decorate, by default it will be called on every request
+    def log(self,                                                                                   # arguments are automatically received
+            docs: DocumentArray,
+            parameters: Dict,
+            **kwargs):
+        self.logger.info('Request being processed...')
+
+        nr_docs = int(parameters.get('log_docs', self.default_log_docs))                            # accesing parameters (nr are passed as float due to Protobuf)
+        with open(self.log_path, 'a') as f:
+            f.write(f'request at time {time.time()} with {len(docs)} documents:\n')
+            for i, doc in enumerate(docs):
+                f.write(f'\tprocessing doc.id {doc.id}. content = {doc.content}\n')
+                if i + 1 == nr_docs:
+                    break
+
 
 
 class MemMapIndexer(Executor):
@@ -79,23 +111,28 @@ def _cosine(A_norm_ext, B_norm_ext):
     return A_norm_ext.dot(B_norm_ext).clip(min=0) / 2
 
 
-# WE IMPLEMENT THIS DURING THE WORKSHOP
+class RequestLogger(Executor):                                                                      # needs to inherit from Executor
+    def __init__(self,
+                default_log_docs: int = 1,                                                          # your arguments
+                *args, **kwargs):                                                                   # *args and **kwargs are required for Executor
+        super().__init__(*args, **kwargs)                                                           # before any custom logic
+        self.default_log_docs = default_log_docs
+        self.logger = JinaLogger('req_logger')
+        self.log_path = os.path.join(self.workspace, 'log.txt')
+        if not os.path.exists(self.log_path):
+            with open(self.log_path, 'w'): pass
 
-# class PngToDiskLogger(Executor):
-    
-#     def __init__(
-#         self,
-#         default_traversal_paths: List[str] = None,
-#         *args,
-#         **kwargs
-#     ):
-#         super().__init__(*args, **kwargs)
-#         if default_traversal_paths:
-#             self.default_traversal_paths = default_traversal_paths
-#         else:
-#             self.default_traversal_paths = ['r']
-    
-#     def log(self, docs: DocumentArray, parameters: Dict, **kwargs):
-#         for d in docs.traverse_flat(parameters.get('traversal_paths', self.default_traversal_paths)):
-#             # save d.content. 
-#             pass
+    @requests                                                                                       # decorate, by default it will be called on every request
+    def log(self,                                                                                   # arguments are automatically received
+            docs: DocumentArray,
+            parameters: Dict,
+            **kwargs):
+        self.logger.info('Request being processed...')
+
+        nr_docs = int(parameters.get('log_docs', self.default_log_docs))                            # accesing parameters (nr are passed as float due to Protobuf)
+        with open(self.log_path, 'a') as f:
+            f.write(f'request at time {time.time()} with {len(docs)} documents:\n')
+            for i, doc in enumerate(docs):
+                f.write(f'\tsearching with doc.id {doc.id}. filename = {doc.tags["filename"]}\n')
+                if i + 1 == nr_docs:
+                    break

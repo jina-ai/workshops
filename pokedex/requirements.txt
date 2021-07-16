@@ -1,6 +1,7 @@
-jina[hub,cv,uvloop,optimizer]~=2.0
-jupyterlab
-git+https://github.com/jina-ai/executor-image-normalizer.git@feat-dtype-conversion
-git+https://github.com/jina-ai/executor-image-torch-encoder.git@fix-setuppy
-git+https://github.com/jina-ai/executor-big-transfer-encoder.git
+jina[hub,cv,uvloop,optimizer]~=2.0.7
+jupyterlab==3.0.16
+executor-big-transfer-encoder @ git+https://github.com/jina-ai/executor-big-transfer-encoder.git@d64cc79d69e03476cc5a576635d598df37e0d9c7       
+executor-image-normalizer @ git+https://github.com/jina-ai/executor-image-normalizer.git@1b6cebcfa847c7b1dfe746c86ecc298f0b4eaa5b               
+executor-image-torch-encoder @ git+https://github.com/jina-ai/executor-image-torch-encoder.git@77a4ef9ec800bdbd29cb9f710db6ce390da60161 
+jina-commons @ git+https://github.com/jina-ai/jina-commons.git#egg=jina-commons                                       
 matplotlib==3.4.2
