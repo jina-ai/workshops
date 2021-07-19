@@ -1,21 +1,22 @@
 jtype: Flow
 executors:
+  - name: logger
+    uses:
+        jtype: RequestLogger
+        metas:
+          workspace: $JINA_WORKSPACE
   - name: crafter
     timeout_ready: 600000
     uses: 
       jtype: ImageNormalizer
       with:
         resize_dim: 96
-        target_dtype: numpy.uint8        
+        target_dtype: numpy.uint8   
   - name: encoder
     timeout_ready: 600000
     uses:
         jtype: ImageTorchEncoder
-  - name: logger
-    uses:
-        jtype: RequestLogger
-        metas:
-          workspace: $JINA_WORKSPACE
+    needs:           
   - name: indexer
     uses:
       jtype: MemMapIndexer

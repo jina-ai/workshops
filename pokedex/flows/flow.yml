@@ -11,10 +11,7 @@ executors:
     uses:
         jtype: BigTransferEncoder
         with:
-          on_gpu: true
-  - name: logger
-    uses:
-        jtype: RequestLogger          
+          on_gpu: true     
   - name: indexer
     uses:
       jtype: MemMapIndexer
