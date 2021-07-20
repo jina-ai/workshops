@@ -1,10 +1,5 @@
 jtype: Flow
 executors:
-  - name: logger
-    uses:
-        jtype: RequestLogger
-        metas:
-          workspace: $JINA_WORKSPACE
   - name: crafter
     timeout_ready: 600000
     uses: 
@@ -16,6 +11,13 @@ executors:
     timeout_ready: 600000
     uses:
         jtype: ImageTorchEncoder
+        with:
+            model_name: resnet18
+  - name: logger
+    uses:
+        jtype: RequestLogger
+        metas:
+          workspace: $JINA_WORKSPACE        
     needs:           
   - name: indexer
     uses:
