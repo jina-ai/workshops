@@ -11,6 +11,8 @@ executors:
     timeout_ready: 600000
     uses:
         jtype: ImageTorchEncoder
+        with:
+            model_name: resnet18
   - name: indexer
     uses:
       jtype: MemMapIndexer
