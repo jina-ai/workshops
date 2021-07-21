@@ -1,5 +1,11 @@
 # Jina Workshop: Image Search with Pokemons
 
+## Colab
+
+Use the following link: https://colab.research.google.com/github/jina-ai/workshops/blob/main/pokedex/workshop.ipynb
+
+Alternatively, you can run it locally. Follow the guide below:
+
 ## Before the workshop
 
 **NOTE** Make sure you've done this *before* the workshop.
