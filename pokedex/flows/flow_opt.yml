@@ -5,7 +5,7 @@ executors:
     uses:
       jtype: ImageTorchEncoder
       with:
-        model_name: ${{JINA_MODEL_NAME}} # any model could go here
+        model_name: ${{JINA_MODEL_NAME}} # double brackets are needed for the optimizer
         use_default_preprocessing: True
   - name: embedding_idx
     uses:
