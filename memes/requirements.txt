@@ -1,1 +1,2 @@
 jina==2.1.4
+ipywidgets==7.6.5
