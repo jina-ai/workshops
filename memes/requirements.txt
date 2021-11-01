@@ -1,2 +1,2 @@
-jina==2.1.4
+jina==2.2.1
 ipywidgets==7.6.5
