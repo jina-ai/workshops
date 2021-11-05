@@ -2,6 +2,7 @@ import ipywidgets as widgets
 import IPython.display as display
 import requests
 import os
+from shutil import rmtree
 
 
 def show_images(docs, max_images=5):
@@ -20,7 +21,7 @@ def show_images(docs, max_images=5):
     display.display(box)
 
 def cleanup():
-    os.rmdir("workspace")
+    rmtree("workspace", ignore_errors=True)
     for item in os.listdir():
         if item.endswith(".jpg"):
             os.remove(item)
