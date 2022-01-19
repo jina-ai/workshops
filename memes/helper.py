@@ -5,12 +5,11 @@ import os
 from shutil import rmtree
 
 
-def show_images(docs, max_images=5):
+def show_images(docs, max_images=5, dest_dir="./images"):
     image_list = []
     for doc in docs[:max_images]:
         url = doc.tags["uri_absolute"]
-        filename = url.split("/")[-1]
-        # !wget {url} -q
+        filename = f"{dest_dir}/{url.split('/')[-1]}"
         r = requests.get(url, allow_redirects=True)
         open(filename, 'wb').write(r.content)
 
@@ -22,6 +21,7 @@ def show_images(docs, max_images=5):
 
 def cleanup():
     rmtree("workspace", ignore_errors=True)
+    rmtree("images", ignore_errors=True)
     for item in os.listdir():
         if item.endswith(".jpg"):
             os.remove(item)
