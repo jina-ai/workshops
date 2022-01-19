@@ -6,6 +6,8 @@ from shutil import rmtree
 
 
 def show_images(docs, max_images=5, dest_dir="./images"):
+    if not os.path.isdir(dest_dir):
+        os.mkdir(dest_dir)
     image_list = []
     for doc in docs[:max_images]:
         url = doc.tags["uri_absolute"]
