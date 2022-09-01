@@ -4,15 +4,14 @@ with:
   port: 12345
 executors:
   - name: encoder
-    uses: jinahub://CLIPEncoder
+    uses: jinahub://CLIPEncoder/latest-gpu
     install_requirements: true
     replicas: 2
   - name: indexer
-    uses: jinahub://PQLiteIndexer
+    uses: jinahub://AnnLiteIndexer
     uses_with:
       dim: 512
       metric: cosine
-      include_metadata: true
       columns:
         - ['year', 'int']
         - ['productDisplayName', 'str']
@@ -23,6 +22,5 @@ executors:
         - ['season', 'str']
         - ['baseColour', 'str']
         - ['gender', 'str']
-    uses_metas:
-      workspace: workspace
+    workspace: workspace
     install_requirements: true
