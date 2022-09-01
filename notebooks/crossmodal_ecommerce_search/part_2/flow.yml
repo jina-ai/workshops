@@ -12,15 +12,15 @@ executors:
     uses_with:
       dim: 512
       metric: cosine
-      columns:
-        - ['year', 'int']
-        - ['productDisplayName', 'str']
-        - ['usage', 'str']
-        - ['subCategory', 'str']
-        - ['masterCategory', 'str']
-        - ['articleType', 'str']
-        - ['season', 'str']
-        - ['baseColour', 'str']
-        - ['gender', 'str']
-    workspace: workspace
+      #columns:
+        #- ['year', 'int']
+        #- ['productDisplayName', 'str']
+        #- ['usage', 'str']
+        #- ['subCategory', 'str']
+        #- ['masterCategory', 'str']
+        #- ['articleType', 'str']
+        #- ['season', 'str']
+        #- ['baseColour', 'str']
+        #- ['gender', 'str']
+    #workspace: workspace
     install_requirements: true
