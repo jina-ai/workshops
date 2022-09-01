@@ -23,8 +23,6 @@ executors:
         - ['season', 'str']
         - ['baseColour', 'str']
         - ['gender', 'str']
-        - ['price', 'int']
-        - ['rating', 'int']
     uses_metas:
       workspace: workspace
     install_requirements: true
