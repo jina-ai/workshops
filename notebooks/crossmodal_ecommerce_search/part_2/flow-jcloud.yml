@@ -1,0 +1,35 @@
+jtype: Flow
+with:
+  protocol: grpc
+  port: 12345
+executors:
+  - name: encoder
+    uses: jinahub+docker://CLIPEncoder
+    jcloud:
+      resources:
+        cpu: 2
+        gpu: 2
+        memory: 8G
+    #replicas: 2
+  - name: indexer
+    uses: jinahub+docker://AnnLiteIndexer
+    jcloud:
+      capacity: on-demand
+      resources:
+        storage:
+          type: ebs
+          size: 10G
+    uses_with:
+      n_dim: 512
+      metric: cosine
+      columns:
+        - ['year', 'int']
+        - ['productDisplayName', 'str']
+        - ['usage', 'str']
+        - ['subCategory', 'str']
+        - ['masterCategory', 'str']
+        - ['articleType', 'str']
+        - ['season', 'str']
+        - ['baseColour', 'str']
+        - ['gender', 'str']
+    workspace: workspace
