@@ -1,0 +1,866 @@
+[{
+    "chat_history": [
+        {
+            "user": "User7",
+            "message": "Morning everyone! Are we all clear about the upcoming strategy for model distribution?",
+            "time_stamp": "2024-05-24T09:15:00",
+            "file_name": null,
+            "message_nr": 1,
+            "parent_message_nr": null
+        },
+        {
+            "user": "User3",
+            "message": "I think so, but I'd appreciate a recap. Especially on how we handle licensing.",
+            "time_stamp": "2024-05-24T09:17:45",
+            "file_name": null,
+            "message_nr": 2,
+            "parent_message_nr": 1
+        },
+        {
+            "user": "User1",
+            "message": "Here's the latest draft of our distribution plan. Can someone confirm if all the points are up to date?",
+            "time_stamp": "2024-05-24T09:20:22",
+            "file_name": "Distribution_Plan_v3.pdf",
+            "message_nr": 3,
+            "parent_message_nr": 1
+        },
+        {
+            "user": "User5",
+            "message": "User1, the document looks good, but we need to consider GDPR compliance when distributing models in Europe. Has this been updated in the plan?",
+            "time_stamp": "2024-05-24T09:25:10",
+            "file_name": null,
+            "message_nr": 4,
+            "parent_message_nr": 1
+        },
+        {
+            "user": "User2",
+            "message": "Good point User5. Also, are we set with the data sovereignty requirements in APAC?",
+            "time_stamp": "2024-05-24T09:27:30",
+            "file_name": null,
+            "message_nr": 5,
+            "parent_message_nr": 1
+        },
+        {
+            "user": "User8",
+            "message": "APAC regulations are complex, but we've incorporated the latest info from our legal team. Check section 4 in the document.",
+            "time_stamp": "2024-05-24T09:35:45",
+            "file_name": null,
+            "message_nr": 6,
+            "parent_message_nr": 1
+        },
+        {
+            "user": "User4",
+            "message": "Thanks, User8. Do we have an update on the tech stack we're using to ensure compliance? We mentioned migrating to a new architecture.",
+            "time_stamp": "2024-05-24T09:45:20",
+            "file_name": null,
+            "message_nr": 7,
+            "parent_message_nr": 1
+        },
+        {
+            "user": "User6",
+            "message": "I have been reviewing different architectures; I'll need a few more days to finalize the migration plan.",
+            "time_stamp": "2024-05-24T09:50:15",
+            "file_name": "Tech_Stack_Review.pdf",
+            "message_nr": 8,
+            "parent_message_nr": 1
+        },
+        {
+            "user": "User7",
+            "message": "Thanks for the updates, everyone. Let’s ensure we address all these points comprehensively. Meeting tomorrow to discuss further?",
+            "time_stamp": "2024-05-24T10:00:00",
+            "file_name": null,
+            "message_nr": 9,
+            "parent_message_nr": 1
+        }
+    ],
+    "topic": "Model distribution",
+    "expert_user": "User8"
+},
+{
+    "chat_history": [
+        {
+            "user": "User4",
+            "message": "Let’s revisit our encryption standards for model distribution. Are we up to the industry standards?",
+            "time_stamp": "2024-05-12T09:15:00",
+            "file_name": null,
+            "message_nr": 10,
+            "parent_message_nr": null
+        },
+        {
+            "user": "User1",
+            "message": "I was just looking at the latest encryption protocols. I think we might need an update.",
+            "time_stamp": "2024-05-12T09:20:25",
+            "file_name": "Encryption_Standards_Update.pdf",
+            "message_nr": 11,
+            "parent_message_nr": 10
+        },
+        {
+            "user": "User2",
+            "message": "Could you summarize the main differences? And how they impact our current infrastructure?",
+            "time_stamp": "2024-05-12T09:22:37",
+            "file_name": null,
+            "message_nr": 12,
+            "parent_message_nr": 10
+        },
+        {
+            "user": "User5",
+            "message": "From what I've gathered, the new protocols enhance data security significantly, especially for cloud deployments.",
+            "time_stamp": "2024-05-12T09:30:58",
+            "file_name": null,
+            "message_nr": 13,
+            "parent_message_nr": 10
+        },
+        {
+            "user": "User6",
+            "message": "User5, that sounds promising. Can we ensure compatibility with our current models, or do we need major revisions?",
+            "time_stamp": "2024-05-12T09:40:00",
+            "file_name": null,
+            "message_nr": 14,
+            "parent_message_nr": 10
+        },
+        {
+            "user": "User3",
+            "message": "I'll need to check the integration aspects. Might have some dependency issues to address.",
+            "time_stamp": "2024-05-12T09:45:23",
+            "file_name": null,
+            "message_nr": 15,
+            "parent_message_nr": 10
+        },
+        {
+            "user": "User7",
+            "message": "I’ve scheduled a review session for tomorrow. Let’s make sure we cover all technical grounds.",
+            "time_stamp": "2024-05-12T10:00:00",
+            "file_name": null,
+            "message_nr": 16,
+            "parent_message_nr": 10
+        },
+        {
+            "user": "User8",
+            "message": "Great initiative. I'll prep the current infrastructure overview for us to discuss.",
+            "time_stamp": "2024-05-12T10:05:15",
+            "file_name": "Infrastructure_Current_Overview.pdf",
+            "message_nr": 17,
+            "parent_message_nr": 10
+        }
+    ],
+    "topic": "Model distribution",
+    "expert_user": "User5"
+},
+{
+    "chat_history": [
+        {
+            "user": "User2",
+            "message": "Hi team, I’ve been reviewing the feedback on our model’s performance from different regions. Seems like we need a better distribution strategy.",
+            "time_stamp": "2024-05-15T09:10:00",
+            "file_name": null,
+            "message_nr": 18,
+            "parent_message_nr": null
+        },
+        {
+            "user": "User5",
+            "message": "I agree. The latency issues in the APAC region are a concern. Perhaps we should consider local deployment hubs?",
+            "time_stamp": "2024-05-15T09:15:30",
+            "file_name": null,
+            "message_nr": 19,
+            "parent_message_nr": 18
+        },
+        {
+            "user": "User8",
+            "message": "Local hubs might solve it. I'll draft a preliminary plan for setting these up. We’ll need to discuss potential partners.",
+            "time_stamp": "2024-05-15T09:20:45",
+            "file_name": null,
+            "message_nr": 20,
+            "parent_message_nr": 18
+        },
+        {
+            "user": "User1",
+            "message": "That’s a solid plan, User8. Should we also consider data compliance issues in those regions?",
+            "time_stamp": "2024-05-15T09:25:00",
+            "file_name": null,
+            "message_nr": 21,
+            "parent_message_nr": 18
+        },
+        {
+            "user": "User3",
+            "message": "Yes, and let’s not forget the cost implications of local servers. Maybe we can find a way to optimize our existing infrastructure instead.",
+            "time_stamp": "2024-05-15T09:28:00",
+            "file_name": null,
+            "message_nr": 22,
+            "parent_message_nr": 18
+        },
+        {
+            "user": "User7",
+            "message": "Good points. User3, can you compile a cost-benefit analysis? We need to make an informed decision.",
+            "time_stamp": "2024-05-15T09:32:00",
+            "file_name": null,
+            "message_nr": 23,
+            "parent_message_nr": 18
+        },
+        {
+            "user": "User4",
+            "message": "I’ll reach out to our data centers in the region for more input on this.",
+            "time_stamp": "2024-05-15T09:35:00",
+            "file_name": null,
+            "message_nr": 24,
+            "parent_message_nr": 18
+        },
+        {
+            "user": "User6",
+            "message": "Meanwhile, I'll review our current bandwidth capabilities and see how we can enhance them without significant cost.",
+            "time_stamp": "2024-05-15T09:40:00",
+            "file_name": "Bandwidth_Review.pdf",
+            "message_nr": 25,
+            "parent_message_nr": 18
+        },
+        {
+            "user": "User9",
+            "message": "Let’s also ensure we schedule a tech review next week to go over all these proposals.",
+            "time_stamp": "2024-05-15T09:45:00",
+            "file_name": null,
+            "message_nr": 26,
+            "parent_message_nr": 18
+        },
+        {
+            "user": "User10",
+            "message": "Agreed. It’s critical we get everyone on the same page before we proceed.",
+            "time_stamp": "2024-05-15T09:50:00",
+            "file_name": null,
+            "message_nr": 27,
+            "parent_message_nr": 18
+        }
+    ],
+    "topic": "Model distribution",
+    "expert_user": "User8"
+},
+{
+    "chat_history": [
+        {
+            "user": "User3",
+            "message": "Starting today's discussion, has everyone had a chance to review the global compliance regulations attached in last week's summary?",
+            "time_stamp": "2024-05-18T09:05:00",
+            "file_name": null,
+            "message_nr": 28,
+            "parent_message_nr": null
+        },
+        {
+            "user": "User1",
+            "message": "Yes, but I'm still unclear about the specifics for data transfer restrictions in South America. Can someone clarify?",
+            "time_stamp": "2024-05-18T09:10:00",
+            "file_name": null,
+            "message_nr": 29,
+            "parent_message_nr": 28
+        },
+        {
+            "user": "User6",
+            "message": "I can help with that. The main issue there is with the storage of personal data outside national borders. I'll forward the legal brief.",
+            "time_stamp": "2024-05-18T09:15:00",
+            "file_name": "Legal_Brief_SA_Regulations.pdf",
+            "message_nr": 30,
+            "parent_message_nr": 28
+        },
+        {
+            "user": "User4",
+            "message": "That's helpful, thanks User6. Are we ensuring our infrastructure can handle these restrictions without affecting performance?",
+            "time_stamp": "2024-05-18T09:20:00",
+            "file_name": null,
+            "message_nr": 31,
+            "parent_message_nr": 28
+        },
+        {
+            "user": "User2",
+            "message": "It's a challenge, but I think User7’s proposals on hybrid cloud solutions might be a good fit here.",
+            "time_stamp": "2024-05-18T09:25:00",
+            "file_name": null,
+            "message_nr": 32,
+            "parent_message_nr": 28
+        },
+        {
+            "user": "User7",
+            "message": "Right, I was about to suggest reviewing those again. Hybrid solutions could provide flexibility with where data is stored and processed.",
+            "time_stamp": "2024-05-18T09:30:00",
+            "file_name": null,
+            "message_nr": 33,
+            "parent_message_nr": 28
+        },
+        {
+            "user": "User8",
+            "message": "Should we set up a test environment to simulate this before a full rollout? It could help us identify any potential issues early on.",
+            "time_stamp": "2024-05-18T09:35:00",
+            "file_name": null,
+            "message_nr": 34,
+            "parent_message_nr": 28
+        },
+        {
+            "user": "User5",
+            "message": "Great idea, User8. I’ll coordinate with the tech team to get this set up by next week.",
+            "time_stamp": "2024-05-18T09:40:00",
+            "file_name": null,
+            "message_nr": 35,
+            "parent_message_nr": 28
+        },
+        {
+            "user": "User9",
+            "message": "Let's also ensure that all regional team leads are looped in. They need to be aware of how these changes might impact their operations.",
+            "time_stamp": "2024-05-18T09:45:00",
+            "file_name": null,
+            "message_nr": 36,
+            "parent_message_nr": 28
+        },
+        {
+            "user": "User10",
+            "message": "Agreed. I'll organize a briefing session for all regional managers tomorrow.",
+            "time_stamp": "2024-05-18T09:50:00",
+            "file_name": null,
+            "message_nr": 37,
+            "parent_message_nr": 28
+        }
+    ],
+    "topic": "Model distribution",
+    "expert_user": "User6"
+},
+{
+    "chat_history": [
+        {
+            "user": "User2",
+            "message": "Can we discuss the scalability of our current model distribution framework? I think it's not keeping up with demand.",
+            "time_stamp": "2024-05-22T10:05:00",
+            "file_name": null,
+            "message_nr": 38,
+            "parent_message_nr": null
+        },
+        {
+            "user": "User4",
+            "message": "I've noticed the same during peak usage times. Maybe we need to think about more distributed nodes?",
+            "time_stamp": "2024-05-22T10:10:15",
+            "file_name": null,
+            "message_nr": 39,
+            "parent_message_nr": 38
+        },
+        {
+            "user": "User6",
+            "message": "Distributed nodes could help. I'll draft a proposal on potential new node locations and the cost involved.",
+            "time_stamp": "2024-05-22T10:15:30",
+            "file_name": "Node_Distribution_Proposal.pdf",
+            "message_nr": 40,
+            "parent_message_nr": 38
+        },
+        {
+            "user": "User1",
+            "message": "That's a good start, User6. We should also consider the data transmission security between these nodes.",
+            "time_stamp": "2024-05-22T10:20:00",
+            "file_name": null,
+            "message_nr": 41,
+            "parent_message_nr": 38
+        },
+        {
+            "user": "User5",
+            "message": "Agree with User1. Maybe we should upgrade our encryption protocols as well. I'll look into the latest standards we could adopt.",
+            "time_stamp": "2024-05-22T10:25:00",
+            "file_name": null,
+            "message_nr": 42,
+            "parent_message_nr": 38
+        },
+        {
+            "user": "User3",
+            "message": "I think a review of our overall architecture might be necessary if we're considering major changes like this.",
+            "time_stamp": "2024-05-22T10:30:00",
+            "file_name": null,
+            "message_nr": 43,
+            "parent_message_nr": 38
+        },
+        {
+            "user": "User7",
+            "message": "Good point, User3. Let's set up a technical review meeting. I'll prepare the agenda.",
+            "time_stamp": "2024-05-22T10:35:00",
+            "file_name": "Technical_Review_Meeting_Agenda.pdf",
+            "message_nr": 44,
+            "parent_message_nr": 38
+        },
+        {
+            "user": "User8",
+            "message": "Also, let's not overlook the impact on our end-users. We need a seamless transition plan.",
+            "time_stamp": "2024-05-22T10:40:00",
+            "file_name": null,
+            "message_nr": 45,
+            "parent_message_nr": 38
+        },
+        {
+            "user": "User9",
+            "message": "Absolutely. I suggest we draft a user communication strategy too, to keep our clients informed and engaged.",
+            "time_stamp": "2024-05-22T10:45:00",
+            "file_name": null,
+            "message_nr": 46,
+            "parent_message_nr": 38
+        }
+    ],
+    "topic": "Model distribution",
+    "expert_user": "User6"
+},
+{
+    "chat_history": [
+        {
+            "user": "User10",
+            "message": "Let’s address the feedback on our last rollout. We've seen some issues with model updates not propagating quickly enough.",
+            "time_stamp": "2024-05-25T09:00:00",
+            "file_name": null,
+            "message_nr": 47,
+            "parent_message_nr": null
+        },
+        {
+            "user": "User1",
+            "message": "I think it's due to the regional server load. Should we consider load balancing or additional server resources?",
+            "time_stamp": "2024-05-25T09:04:00",
+            "file_name": null,
+            "message_nr": 48,
+            "parent_message_nr": 47
+        },
+        {
+            "user": "User3",
+            "message": "Adding servers might help, but it’s also a cost issue. Perhaps optimizing our current setup could be more cost-effective?",
+            "time_stamp": "2024-05-25T09:08:00",
+            "file_name": null,
+            "message_nr": 49,
+            "parent_message_nr": 47
+        },
+        {
+            "user": "User5",
+            "message": "Agreed, User3. We need a detailed analysis of traffic and load patterns. I'll start pulling the data and prepare a report.",
+            "time_stamp": "2024-05-25T09:12:00",
+            "file_name": "Traffic_Load_Analysis_Report.pdf",
+            "message_nr": 50,
+            "parent_message_nr": 47
+        },
+        {
+            "user": "User4",
+            "message": "Let's also consider automation for some of the update processes. It could reduce the load during peak times.",
+            "time_stamp": "2024-05-25T09:16:00",
+            "file_name": null,
+            "message_nr": 51,
+            "parent_message_nr": 47
+        },
+        {
+            "user": "User7",
+            "message": "I'll review our automation capabilities and see how we can integrate new tools to help with that.",
+            "time_stamp": "2024-05-25T09:20:00",
+            "file_name": "Automation_Capabilities_Review.pdf",
+            "message_nr": 52,
+            "parent_message_nr": 47
+        },
+        {
+            "user": "User8",
+            "message": "And let’s not forget to test these changes extensively. We can't afford another hiccup that affects all users simultaneously.",
+            "time_stamp": "2024-05-25T09:24:00",
+            "file_name": null,
+            "message_nr": 53,
+            "parent_message_nr": 47
+        },
+        {
+            "user": "User2",
+            "message": "Definitely. I propose setting up a small-scale pilot program to gauge the impact of these adjustments before a full rollout.",
+            "time_stamp": "2024-05-25T09:28:00",
+            "file_name": null,
+            "message_nr": 54,
+            "parent_message_nr": 47
+        },
+        {
+            "user": "User6",
+            "message": "That sounds like a plan. I’ll coordinate with the testing team to arrange this.",
+            "time_stamp": "2024-05-25T09:32:00",
+            "file_name": null,
+            "message_nr": 55,
+            "parent_message_nr": 47
+        },
+        {
+            "user": "User9",
+            "message": "I’ll update the project timeline to include these new tasks. Let's aim to have these updates in place by next quarter.",
+            "time_stamp": "2024-05-25T09:36:00",
+            "file_name": null,
+            "message_nr": 56,
+            "parent_message_nr": 47
+        }
+    ],
+    "topic": "Model distribution",
+    "expert_user": "User5"
+},
+{
+    "chat_history": [
+        {
+            "user": "User2",
+            "message": "Following up on our discussions about enhancing model distribution, have we considered the potential of edge computing in our strategy?",
+            "time_stamp": "2024-05-28T09:00:00",
+            "file_name": null,
+            "message_nr": 57,
+            "parent_message_nr": null
+        },
+        {
+            "user": "User4",
+            "message": "Edge computing could definitely reduce latency for real-time applications. Should we start a pilot project to evaluate its effectiveness?",
+            "time_stamp": "2024-05-28T09:05:00",
+            "file_name": null,
+            "message_nr": 58,
+            "parent_message_nr": 57
+        },
+        {
+            "user": "User1",
+            "message": "I like that idea. It aligns well with our needs for faster data processing closer to end-users. What regions would be our focus for this pilot?",
+            "time_stamp": "2024-05-28T09:10:00",
+            "file_name": null,
+            "message_nr": 59,
+            "parent_message_nr": 57
+        },
+        {
+            "user": "User3",
+            "message": "I suggest starting with regions where we’ve had the most latency issues. Maybe start with North America and East Asia?",
+            "time_stamp": "2024-05-28T09:15:00",
+            "file_name": null,
+            "message_nr": 60,
+            "parent_message_nr": 57
+        },
+        {
+            "user": "User7",
+            "message": "Good points. Let’s also ensure we have the necessary infrastructure partners on board. I'll start reaching out to potential partners in these regions.",
+            "time_stamp": "2024-05-28T09:20:00",
+            "file_name": null,
+            "message_nr": 61,
+            "parent_message_nr": 57
+        },
+        {
+            "user": "User6",
+            "message": "To support that, we'll need to upgrade our network capabilities. I'm on it, drafting the technical requirements and potential costs.",
+            "time_stamp": "2024-05-28T09:25:00",
+            "file_name": "Network_Upgrade_Requirements.pdf",
+            "message_nr": 62,
+            "parent_message_nr": 57
+        },
+        {
+            "user": "User5",
+            "message": "Meanwhile, I’ll prepare a report on the expected improvements in model performance with edge computing integration.",
+            "time_stamp": "2024-05-28T09:30:00",
+            "file_name": "Model_Performance_Improvement_Report.pdf",
+            "message_nr": 63,
+            "parent_message_nr": 57
+        },
+        {
+            "user": "User8",
+            "message": "Let’s also schedule a workshop to brainstorm potential challenges and develop a comprehensive rollout plan.",
+            "time_stamp": "2024-05-28T09:35:00",
+            "file_name": null,
+            "message_nr": 64,
+            "parent_message_nr": 57
+        },
+        {
+            "user": "User9",
+            "message": "Perfect. I'll organize the logistics for the workshop. Expect an invite with the details soon.",
+            "time_stamp": "2024-05-28T09:40:00",
+            "file_name": null,
+            "message_nr": 65,
+            "parent_message_nr": 57
+        }
+    ],
+    "topic": "Model distribution",
+    "expert_user": "User6"
+},
+{
+    "chat_history": [
+        {
+            "user": "User1",
+            "message": "Regarding our push towards using edge computing, do we have a clear idea of the security implications?",
+            "time_stamp": "2024-05-30T09:00:00",
+            "file_name": null,
+            "message_nr": 66,
+            "parent_message_nr": null
+        },
+        {
+            "user": "User3",
+            "message": "That's a crucial point. Edge computing introduces new vulnerabilities. I'm compiling a risk assessment to cover this.",
+            "time_stamp": "2024-05-30T09:05:00",
+            "file_name": "Edge_Computing_Risk_Assessment.pdf",
+            "message_nr": 67,
+            "parent_message_nr": 66
+        },
+        {
+            "user": "User4",
+            "message": "We should also consider the regulatory compliance for data processed at the edge. Different regions will have different requirements.",
+            "time_stamp": "2024-05-30T09:10:00",
+            "file_name": null,
+            "message_nr": 68,
+            "parent_message_nr": 66
+        },
+        {
+            "user": "User6",
+            "message": "Absolutely, I’ll look into integrating regional compliance measures into our deployment strategy.",
+            "time_stamp": "2024-05-30T09:15:00",
+            "file_name": null,
+            "message_nr": 69,
+            "parent_message_nr": 66
+        },
+        {
+            "user": "User7",
+            "message": "I suggest we also upgrade our encryption methods to secure data more effectively at each node.",
+            "time_stamp": "2024-05-30T09:20:00",
+            "file_name": null,
+            "message_nr": 70,
+            "parent_message_nr": 66
+        },
+        {
+            "user": "User2",
+            "message": "Good idea. I will review our current encryption technologies and propose a few options that can be more effective for our needs.",
+            "time_stamp": "2024-05-30T09:25:00",
+            "file_name": "Encryption_Technologies_Review.pdf",
+            "message_nr": 71,
+            "parent_message_nr": 66
+        },
+        {
+            "user": "User5",
+            "message": "Let’s also plan for a training session for our team on these new technologies. It’s important everyone is up to speed.",
+            "time_stamp": "2024-05-30T09:30:00",
+            "file_name": null,
+            "message_nr": 72,
+            "parent_message_nr": 66
+        },
+        {
+            "user": "User8",
+            "message": "Agreed. I'll organize the training logistics and schedule it for next month.",
+            "time_stamp": "2024-05-30T09:35:00",
+            "file_name": null,
+            "message_nr": 73,
+            "parent_message_nr": 66
+        },
+        {
+            "user": "User9",
+            "message": "And let's ensure our support team is prepared to handle inquiries related to these changes. We need robust support protocols in place.",
+            "time_stamp": "2024-05-30T09:40:00",
+            "file_name": null,
+            "message_nr": 74,
+            "parent_message_nr": 66
+        }
+    ],
+    "topic": "Model distribution",
+    "expert_user": "User3"
+},
+{
+    "chat_history": [
+        {
+            "user": "User4",
+            "message": "As we enhance our model distribution, we should also consider the impact on our user interface. Any thoughts on this integration?",
+            "time_stamp": "2024-05-31T10:00:00",
+            "file_name": null,
+            "message_nr": 75,
+            "parent_message_nr": null
+        },
+        {
+            "user": "User6",
+            "message": "Absolutely. We need to ensure the UI changes are seamless and user-friendly, especially when displaying model results that are processed at edge locations.",
+            "time_stamp": "2024-05-31T10:05:00",
+            "file_name": null,
+            "message_nr": 76,
+            "parent_message_nr": 75
+        },
+        {
+            "user": "User1",
+            "message": "I can draft some initial designs and run them through a user test group. We’ll need real feedback to ensure it meets user needs.",
+            "time_stamp": "2024-05-31T10:10:00",
+            "file_name": null,
+            "message_nr": 77,
+            "parent_message_nr": 75
+        },
+        {
+            "user": "User7",
+            "message": "That’s a good start. Also, let's consider accessibility standards to make sure our updates are inclusive.",
+            "time_stamp": "2024-05-31T10:15:00",
+            "file_name": null,
+            "message_nr": 78,
+            "parent_message_nr": 75
+        },
+        {
+            "user": "User5",
+            "message": "I’ll look into the latest accessibility guidelines and integrate them into our UI development process.",
+            "time_stamp": "2024-05-31T10:20:00",
+            "file_name": "Accessibility_Guidelines_Update.pdf",
+            "message_nr": 79,
+            "parent_message_nr": 75
+        },
+        {
+            "user": "User3",
+            "message": "It’s also crucial to enhance our backend APIs to support faster data exchange. I'll review and optimize our current APIs for better performance with the new model distribution architecture.",
+            "time_stamp": "2024-05-31T10:25:00",
+            "file_name": null,
+            "message_nr": 80,
+            "parent_message_nr": 75
+        },
+        {
+            "user": "User2",
+            "message": "Great initiative, User3. Let’s schedule a meeting next week to go over all these updates and ensure everyone is aligned.",
+            "time_stamp": "2024-05-31T10:30:00",
+            "file_name": null,
+            "message_nr": 81,
+            "parent_message_nr": 75
+        },
+        {
+            "user": "User8",
+            "message": "I’ll prepare a comprehensive update for the stakeholders. It’s important they understand the scope and benefits of these changes.",
+            "time_stamp": "2024-05-31T10:35:00",
+            "file_name": null,
+            "message_nr": 82,
+            "parent_message_nr": 75
+        },
+        {
+            "user": "User9",
+            "message": "Also, don't forget to document all changes. We need detailed records for future audits and iterations.",
+            "time_stamp": "2024-05-31T10:40:00",
+            "file_name": null,
+            "message_nr": 83,
+            "parent_message_nr": 75
+        },
+        {
+            "user": "User10",
+            "message": "Acknowledged. I'll oversee the documentation process and ensure it meets our standards.",
+            "time_stamp": "2024-05-31T10:45:00",
+            "file_name": null,
+            "message_nr": 84,
+            "parent_message_nr": 75
+        }
+    ],
+    "topic": "Model distribution",
+    "expert_user": "User3"
+},
+{
+    "chat_history": [
+        {
+            "user": "User6",
+            "message": "Let's discuss our deployment strategy for the new model updates. Are we ready to scale this across all markets?",
+            "time_stamp": "2024-05-31T11:00:00",
+            "file_name": null,
+            "message_nr": 85,
+            "parent_message_nr": null
+        },
+        {
+            "user": "User1",
+            "message": "We need to first ensure that all regional servers are updated to handle the new models. There might be some delays in the APAC region.",
+            "time_stamp": "2024-05-31T11:05:00",
+            "file_name": null,
+            "message_nr": 86,
+            "parent_message_nr": 85
+        },
+        {
+            "user": "User4",
+            "message": "I propose setting up a dedicated task force to handle each region's specific needs and challenges. This could streamline the process.",
+            "time_stamp": "2024-05-31T11:10:00",
+            "file_name": null,
+            "message_nr": 87,
+            "parent_message_nr": 85
+        },
+        {
+            "user": "User7",
+            "message": "That’s a solid idea, User4. I can take lead on coordinating the task force for Europe, given my familiarity with the regulatory landscape there.",
+            "time_stamp": "2024-05-31T11:15:00",
+            "file_name": null,
+            "message_nr": 88,
+            "parent_message_nr": 85
+        },
+        {
+            "user": "User3",
+            "message": "While we’re at it, let’s not overlook data privacy concerns. Each region has its nuances that must be respected.",
+            "time_stamp": "2024-05-31T11:20:00",
+            "file_name": null,
+            "message_nr": 89,
+            "parent_message_nr": 85
+        },
+        {
+            "user": "User5",
+            "message": "I'll compile a report on data privacy requirements for all the regions we operate in. This should help each task force member tailor their approach.",
+            "time_stamp": "2024-05-31T11:25:00",
+            "file_name": "Data_Privacy_Requirements_Report.pdf",
+            "message_nr": 90,
+            "parent_message_nr": 85
+        },
+        {
+            "user": "User2",
+            "message": "Also, considering the complexity of this rollout, we should update our risk management plans to include potential issues we might face.",
+            "time_stamp": "2024-05-31T11:30:00",
+            "file_name": null,
+            "message_nr": 91,
+            "parent_message_nr": 85
+        },
+        {
+            "user": "User8",
+            "message": "Agreed, User2. I'll draft an updated risk management plan and circulate it for feedback by the end of this week.",
+            "time_stamp": "2024-05-31T11:35:00",
+            "file_name": null,
+            "message_nr": 92,
+            "parent_message_nr": 85
+        },
+        {
+            "user": "User9",
+            "message": "To ensure seamless communication across all teams, let's also set up a bi-weekly check-in for all task force leaders.",
+            "time_stamp": "2024-05-31T11:40:00",
+            "file_name": null,
+            "message_nr": 93,
+            "parent_message_nr": 85
+        },
+        {
+            "user": "User10",
+            "message": "I'll coordinate the check-ins. First one scheduled for next Friday.",
+            "time_stamp": "2024-05-31T11:45:00",
+            "file_name": null,
+            "message_nr": 94,
+            "parent_message_nr": 85
+        }
+    ],
+    "topic": "Model distribution",
+    "expert_user": "User5"
+},
+{
+    "chat_history": [
+        {
+            "user": "User3",
+            "message": "Now that our risk management updates are in place, should we consider expanding our model distribution to emerging markets?",
+            "time_stamp": "2024-05-31T12:00:00",
+            "file_name": null,
+            "message_nr": 95,
+            "parent_message_nr": null
+        },
+        {
+            "user": "User6",
+            "message": "That’s an important step, but we need to first assess the market readiness and infrastructure capabilities in those regions.",
+            "time_stamp": "2024-05-31T12:05:00",
+            "file_name": null,
+            "message_nr": 96,
+            "parent_message_nr": 95
+        },
+        {
+            "user": "User7",
+            "message": "I'll take the lead on conducting a market analysis for South East Asia. I believe there’s significant potential there.",
+            "time_stamp": "2024-05-31T12:10:00",
+            "file_name": null,
+            "message_nr": 97,
+            "parent_message_nr": 95
+        },
+        {
+            "user": "User1",
+            "message": "Good initiative, User7. We should also look into language localization and cultural customization for our models to ensure better acceptance.",
+            "time_stamp": "2024-05-31T12:15:00",
+            "file_name": null,
+            "message_nr": 98,
+            "parent_message_nr": 95
+        },
+        {
+            "user": "User2",
+            "message": "Agreed. I’ll start gathering technical resources and partners who can help with the localization process.",
+            "time_stamp": "2024-05-31T12:20:00",
+            "file_name": null,
+            "message_nr": 99,
+            "parent_message_nr": 95
+        },
+        {
+            "user": "User4",
+            "message": "And let's not forget regulatory compliance. Each new market will have its own legal requirements for data and model usage.",
+            "time_stamp": "2024-05-31T12:25:00",
+            "file_name": "Regulatory_Compliance_Checklist.pdf",
+            "message_nr": 100,
+            "parent_message_nr": 95
+        }
+    ],
+    "topic": "Model distribution",
+    "expert_user": "User6"
+}]
