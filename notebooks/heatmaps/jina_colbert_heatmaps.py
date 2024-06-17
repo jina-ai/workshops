@@ -1,3 +1,4 @@
+import io
 import matplotlib.pyplot as plt
 import requests
 import seaborn
@@ -9,6 +10,8 @@ from colbert.modeling.checkpoint import Checkpoint
 from colbert.infra import ColBERTConfig
 from matplotlib.patches import Rectangle
 from transformers import AutoTokenizer
+
+from PIL import Image
 
 
 def preprocess_doc(doc):
@@ -58,8 +61,8 @@ def compute_relevance_scores_colbert(query_embeddings, document_embeddings):
 
 
 def create_single_heatmap(scores, query_tokens, document_tokens):
+    plt.clf()
     fig, axs = plt.subplots(nrows=1, ncols=1)
-    seaborn.set_theme(rc={"figure.figsize": (20, 7)})
     fig.subplots_adjust(bottom=0.2, top=0.95, right=0.95)
     s_plot = seaborn.heatmap(
         scores[:, : len(document_tokens)],
@@ -81,8 +84,10 @@ def create_single_heatmap(scores, query_tokens, document_tokens):
                     (position, index), 1, 1, fill=False, edgecolor="red", lw=3
                 )
             )
-    #plt.close()
-    return fig
+    buf = io.BytesIO()
+    fig.savefig(buf)
+    buf.seek(0)
+    return Image.open(buf)
 
 
 def filter_query_tokens(tokens):
