@@ -81,7 +81,7 @@ def create_single_heatmap(scores, query_tokens, document_tokens):
                     (position, index), 1, 1, fill=False, edgecolor="red", lw=3
                 )
             )
-    plt.close()
+    #plt.close()
     return fig
 
 
