@@ -6,8 +6,6 @@ import string
 import torch
 import torch.nn.functional as F
 
-from colbert.modeling.checkpoint import Checkpoint
-from colbert.infra import ColBERTConfig
 from matplotlib.patches import Rectangle
 from transformers import AutoTokenizer
 
@@ -91,7 +89,7 @@ def create_single_heatmap(scores, query_tokens, document_tokens, figsize):
     return Image.open(buf)
 
 
-def filter_query_tokens(tokens):
+def filter_document_tokens(tokens):
     return list(filter(lambda x: x not in string.punctuation, tokens))
 
 
@@ -115,7 +113,7 @@ class JinaColbertHeatmapMaker:
             auto_tokens.insert(0, '[CLS]')
             auto_tokens.insert(1, 'd')
             auto_tokens.append('[SEP]')
-            auto_tokens = self.filter_document_tokens(auto_tokens)
+            auto_tokens = filter_document_tokens(auto_tokens)
         return auto_tokens
 
     def compute_heatmap(self, document, query, figsize=None):
