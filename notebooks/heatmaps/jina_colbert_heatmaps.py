@@ -60,9 +60,9 @@ def compute_relevance_scores_colbert(query_embeddings, document_embeddings):
     return sorted_indices, scores
 
 
-def create_single_heatmap(scores, query_tokens, document_tokens):
+def create_single_heatmap(scores, query_tokens, document_tokens, figsize):
     plt.clf()
-    fig, axs = plt.subplots(nrows=1, ncols=1)
+    fig, axs = plt.subplots(nrows=1, ncols=1, figsize=figsize)
     fig.subplots_adjust(bottom=0.2, top=0.95, right=0.95)
     s_plot = seaborn.heatmap(
         scores[:, : len(document_tokens)],
@@ -87,6 +87,7 @@ def create_single_heatmap(scores, query_tokens, document_tokens):
     buf = io.BytesIO()
     fig.savefig(buf)
     buf.seek(0)
+    plt.close()
     return Image.open(buf)
 
 
@@ -138,7 +139,7 @@ class JinaColbertHeatmapMaker:
 
         return string_token
 
-    def compute_heatmap(self, document, query):
+    def compute_heatmap(self, document, query, figsize=None):
         document_embeddings = preprocess_doc(document)
 
         query_embeddings = torch.Tensor(query["embeddings"])
@@ -149,7 +150,7 @@ class JinaColbertHeatmapMaker:
         document_tokens = self.tokenize(
             document["text"], is_query=False
         )
-        return create_single_heatmap(scores[0], query_tokens, document_tokens)
+        return create_single_heatmap(scores[0], query_tokens, document_tokens, figsize)
 
     def embed(self, text: str, is_query: bool = True):
         if is_query:
