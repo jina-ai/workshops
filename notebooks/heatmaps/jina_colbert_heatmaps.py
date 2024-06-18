@@ -98,46 +98,25 @@ def filter_query_tokens(tokens):
 class JinaColbertHeatmapMaker:
     def __init__(self, jina_api_key: str):
         self.auto_tokenizer = AutoTokenizer.from_pretrained("jinaai/jina-colbert-v1-en")
-        ckpt = Checkpoint(
-            "jinaai/jina-colbert-v1-en",
-            colbert_config=ColBERTConfig(root="experiments"),
-        )
-        self.query_tokenizer = ckpt.query_tokenizer
-        self.doc_tokenizer = ckpt.doc_tokenizer
         self.jina_api_key = jina_api_key
 
     def tokenize(self, text, is_query=True):
         auto_tokens = self.auto_tokenizer.tokenize(
-            text,
+            ". " + text,
             padding=False,
             truncation=True,
             return_token_type_ids=False,
-        )
+            )
         if is_query:
-            all_encoded_inputs = self.query_tokenizer.tok(
-                [text],
-                padding=False,
-                truncation=True,
-                return_token_type_ids=False,
-            )
+            auto_tokens.insert(0, '[CLS]')
+            auto_tokens[1] = 'q'
+            auto_tokens.append('[SEP]')
         else:
-            all_encoded_inputs = self.doc_tokenizer.tok(
-                [text],
-                padding=False,
-                truncation=True,
-                return_token_type_ids=False,
-            )
-
-        string_token = self.auto_tokenizer.convert_ids_to_tokens(
-            all_encoded_inputs["input_ids"][0]
-        )
-        if not is_query:
-            string_token = filter_query_tokens(string_token)
-            auto_tokens = filter_query_tokens(auto_tokens)
-        if len(string_token) != len(auto_tokens) + 2:
-            print("Wrong token count:", len(string_token), len(auto_tokens))
-
-        return string_token
+            auto_tokens.insert(0, '[CLS]')
+            auto_tokens.insert(1, 'd')
+            auto_tokens.append('[SEP]')
+            auto_tokens = self.filter_document_tokens(auto_tokens)
+        return auto_tokens
 
     def compute_heatmap(self, document, query, figsize=None):
         document_embeddings = preprocess_doc(document)
