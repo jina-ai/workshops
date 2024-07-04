@@ -61,16 +61,43 @@ def compute_relevance_scores_colbert(query_embeddings, document_embeddings):
 def create_single_heatmap(scores, query_tokens, document_tokens, figsize):
     plt.clf()
     fig, axs = plt.subplots(nrows=1, ncols=1, figsize=figsize)
-    fig.subplots_adjust(bottom=0.2, top=0.95, right=0.95)
+    # fig.subplots_adjust(bottom=0.2, top=0.95, right=0.95)
+    fig.subplots_adjust(left=0, right=1, top=1, bottom=0)
+    # Set background color to black
+    fig.patch.set_facecolor('black')
+    axs.set_facecolor('black')
+        # Determine vmin and vmax from the scores array
+    vmin = scores[:, : len(document_tokens)].min().float()
+    vmax = scores[:, : len(document_tokens)].max().float()
+    # Set the color map to a modern one that fits a black background
+
+    axs.set_aspect('equal')
     s_plot = seaborn.heatmap(
         scores[:, : len(document_tokens)],
         ax=axs,
-        cbar=True,
-        vmin=-0.5,
-        vmax=1,
+        cbar=False,
         xticklabels=document_tokens,
         yticklabels=query_tokens,
+        cmap='flare',
+        cbar_kws={"shrink": 0.8, "orientation": "horizontal", "location":"bottom"},
     )
+    # Change tick colors to white
+    axs.tick_params(axis='x', colors='white', top=True, bottom=False, labeltop=True, labelbottom=False)
+    axs.tick_params(axis='y', colors='white')
+    plt.xticks(rotation=90)
+
+    
+    # Remove the small tick bars
+    axs.xaxis.set_ticks_position('none') 
+    axs.yaxis.set_ticks_position('none')
+
+        # Change the color of the color bar
+    #cbar = s_plot.collections[0].colorbar
+    #cbar.set_ticks([vmin, vmax])
+    #cbar.set_ticklabels([f'{vmin:.1f}', f'{vmax:.1f}'])
+    #cbar.ax.xaxis.set_tick_params(color='white', size=0)
+    #plt.setp(cbar.ax.xaxis.get_ticklabels(), color='white')
+
     if not True:
         axs.axis("off")
     if True:
@@ -79,11 +106,11 @@ def create_single_heatmap(scores, query_tokens, document_tokens, figsize):
 
             s_plot.add_patch(
                 Rectangle(
-                    (position, index), 1, 1, fill=False, edgecolor="red", lw=3
+                    (position, index), 1, 1, fill=False, edgecolor="yellow", lw=1
                 )
             )
     buf = io.BytesIO()
-    fig.savefig(buf)
+    fig.savefig(buf, format='png', facecolor=fig.get_facecolor(), edgecolor='none', bbox_inches='tight', pad_inches=0, dpi=300)
     buf.seek(0)
     plt.close()
     return Image.open(buf)
@@ -107,11 +134,11 @@ class JinaColbertHeatmapMaker:
             )
         if is_query:
             auto_tokens.insert(0, '[CLS]')
-            auto_tokens[1] = 'q'
+            auto_tokens[1] = '<Q>'
             auto_tokens.append('[SEP]')
         else:
             auto_tokens.insert(0, '[CLS]')
-            auto_tokens.insert(1, 'd')
+            auto_tokens.insert(1, '<D>')
             auto_tokens.append('[SEP]')
             auto_tokens = filter_document_tokens(auto_tokens)
         return auto_tokens
